@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_weight="0.25"
+            android:background="#1C1C1E" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#2E2E30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M-HIKE"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+
+            android:layout_marginTop="3dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:drawablePadding="10dp"
+                android:hint="Search hike name..."
+                android:inputType="text"
+                android:padding="2dp"
+                android:textColor="#000000"
+                android:layout_gravity="center"
+                android:textColorHint="#777777" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hikeList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            android:layout_marginTop="40dp"
+            android:paddingBottom="12dp"
+            android:clipToPadding="false" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/taskbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#1C1C1E"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/home"
+            android:padding="6dp"
+            android:layout_weight="1"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:padding="12dp"
+            android:src="@drawable/add" />
+
+        <ImageView
+            android:id="@+id/imgLiked"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/likedlist"
+            android:padding="6dp"
+            android:layout_weight="1"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#1C1C1E"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD NEW HIKE"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="70dp"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name of hike *"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Input name hike..."
+                android:textColor="@android:color/black"
+                android:textColorHint="#AAAAAA"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location of hike *"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:id="@+id/edtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location..."
+                android:textColor="@android:color/black"
+                android:textColorHint="#AAAAAA"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of the hike *"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:id="@+id/edtDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select date"
+                android:focusable="false"
+                android:textColor="@android:color/black"
+                android:textColorHint="#AAAAAA"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Length of hike (km) *"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/edtLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="e.g. 10 km"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"
+                android:textColorHint="#AAAAAA"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/tvParking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Parking Avalaible: "
+                android:textColor="#444444"
+                android:textSize="20dp" />
+
+            <RadioGroup
+                android:id="@+id/radioParking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <RadioButton
+                    android:id="@+id/btnYes"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:text="Yes" />
+                <RadioButton
+                    android:id="@+id/btnNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Level of difficulty *"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp" />
+
+
+            <Spinner
+                android:id="@+id/spinnerDifficulty"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:background="@drawable/background" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Trail Condition *"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black" />
+
+                <Spinner
+                    android:id="@+id/spinnerTrail"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background"
+                    android:padding="4dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Weather Condition *"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black" />
+
+                <Spinner
+                    android:id="@+id/spinnerWeather"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background"
+                    android:padding="4dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:id="@+id/edtDsc"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="top"
+                android:padding="12dp"
+                android:hint="Optional details..."
+                android:textColor="@android:color/black"
+                android:textColorHint="#AAAAAA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Save Hike Details"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@color/black" />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#4A4A4A" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/taskbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#1C1C1E"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/home"
+            android:padding="6dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imgAdd"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/add"
+            android:padding="12dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/imgLiked"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/likedlist"
+            android:padding="6dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</FrameLayout>
